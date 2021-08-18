@@ -1,4 +1,41 @@
-# v2.2.2 - TBD
+# v2.2.5 - TBD
+
+## Fixed
+
+- [#3959](https://github.com/hyperf/hyperf/pull/3959) Fixed validate rule `date` does not work as expected when the value isn't string.
+
+## Optimized
+
+- [#3957](https://github.com/hyperf/hyperf/pull/3957) Support generate the type of getAttribute with `@return` for command `gen:model`.
+
+# v2.2.4 - 2021-08-16
+
+## Fixed
+
+- [#3925](https://github.com/hyperf/hyperf/pull/3925) Fixed bug that heartbeat failed caused by nacos light beat enabled.
+- [#3926](https://github.com/hyperf/hyperf/pull/3926) Fixed bug that the config of `config_center.drivers.nacos.client` does not work.
+
+## Added
+
+- [#3924](https://github.com/hyperf/hyperf/pull/3924) Added health check parameters for consul service register.
+- [#3932](https://github.com/hyperf/hyperf/pull/3932) Support requeue the message when return `NACK` for `AMQP` consumer.
+- [#3941](https://github.com/hyperf/hyperf/pull/3941) Support service register for `rpc-multiplex`.
+- [#3947](https://github.com/hyperf/hyperf/pull/3947) Added method `Str::mask` which used to replace chars from a string by a given char.
+
+## Optimized
+
+- [#3944](https://github.com/hyperf/hyperf/pull/3944) Encapsulated the code for reading aspect meta properties.
+
+# v2.2.3 - 2021-08-09
+
+## Fixed
+
+- [#3897](https://github.com/hyperf/hyperf/pull/3897) Fixed bug that nacos instance will be registered more than once, because heartbeat failed caused by light beat enabled.
+- [#3905](https://github.com/hyperf/hyperf/pull/3905) Fixed null pointer exception when closing AMQPConnection.
+- [#3906](https://github.com/hyperf/hyperf/pull/3906) Fixed bug that close connection failed caused by wait channels flushed.
+- [#3908](https://github.com/hyperf/hyperf/pull/3908) Fixed bug that the process couldn't be restarted caused by loop which using `CoordinatorManager`.
+
+# v2.2.2 - 2021-08-03
 
 ## Fixed
 

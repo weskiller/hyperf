@@ -1,5 +1,44 @@
 # 版本更新記錄
 
+# v2.2.4 - 2021-08-16
+
+## 修復
+
+- [#3925](https://github.com/hyperf/hyperf/pull/3925) 修復 `Nacos` 開啟 `light beat` 功能後，心跳失敗的問題。
+- [#3926](https://github.com/hyperf/hyperf/pull/3926) 修復配置項 `config_center.drivers.nacos.client` 無法正常工作的問題。
+
+## 新增
+
+- [#3924](https://github.com/hyperf/hyperf/pull/3924) 為 `Consul` 服務註冊中心增加配置項 `services.drivers.consul.check`。
+- [#3932](https://github.com/hyperf/hyperf/pull/3932) 為 `AMQP` 消費者增加重新入佇列的配置，允許使用者返回 `NACK` 後，訊息重入佇列。
+- [#3941](https://github.com/hyperf/hyperf/pull/3941) 允許多路複用的 `RPC` 元件使用註冊中心的能力。
+- [#3947](https://github.com/hyperf/hyperf/pull/3947) 新增方法 `Str::mask`，允許使用者對一段文字某段內容打馬賽克。
+
+## 優化
+
+- [#3944](https://github.com/hyperf/hyperf/pull/3944) 封裝了讀取 `Aspect` 元資料的方法。
+
+# v2.2.3 - 2021-08-09
+
+## 修復
+
+- [#3897](https://github.com/hyperf/hyperf/pull/3897) 修復因為 `lightBeatEnabled` 導致心跳失敗，進而導致 `Nacos` 服務註冊多次的問題。
+- [#3905](https://github.com/hyperf/hyperf/pull/3905) 修復 `AMQP` 連線在關閉時導致空指標的問題。
+- [#3906](https://github.com/hyperf/hyperf/pull/3906) 修復 `AMQP` 連線關閉時，因已經銷燬所有等待通道而導致失敗的問題。
+- [#3908](https://github.com/hyperf/hyperf/pull/3908) 修復使用了以 `CoordinatorManager` 為基礎的迴圈邏輯時，自定義程序無法正常重啟的問題。
+
+# v2.2.2 - 2021-08-03
+
+## 修復
+
+- [#3872](https://github.com/hyperf/hyperf/pull/3872) [#3873](https://github.com/hyperf/hyperf/pull/3873) 修復使用 `Nacos` 服務時，因為沒有使用預設的組名，導致心跳失敗的問題。
+- [#3877](https://github.com/hyperf/hyperf/pull/3877) 修復 `Nacos` 服務，心跳會被註冊多次的問題。
+- [#3879](https://github.com/hyperf/hyperf/pull/3879) 修復熱更新因為代理類被覆蓋，導致無法正常使用的問題。
+
+## 優化
+
+- [#3877](https://github.com/hyperf/hyperf/pull/3877) 為 `Nacos` 服務，增加 `lightBeatEnabled` 支援。
+
 # v2.2.1 - 2021-07-27
 
 ## 修復
